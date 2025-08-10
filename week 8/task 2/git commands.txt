@@ -1,0 +1,22 @@
+# Step 1: Create a sample .log file and a log folder
+echo "Sample log content" > sample.log
+mkdir log
+echo "Inside log folder" > log/test.txt
+
+# Step 2: Create a .gitignore file to ignore .log files and the log folder
+echo "*.log" > .gitignore
+echo "log/" >> .gitignore
+
+# Step 3: Verify .gitignore content
+cat .gitignore
+
+# Step 4: Check git status git status
+
+# Step 5: Add .gitignore to staging
+git add .gitignore
+
+# Step 6: Commit the .gitignore file
+git commit -m "Add .gitignore to ignore .log files and log folder"
+
+# Step 7: Push changes to remote repository
+git push origin main

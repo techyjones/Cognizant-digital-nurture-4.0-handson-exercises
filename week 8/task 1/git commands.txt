@@ -1,0 +1,48 @@
+
+# Step 1: Setup your machine with Git Configuration
+
+# 1. Check if Git is installed
+git --version
+
+# 2. Configure user-level Git settings
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# 3. Verify configuration
+git config --list
+
+# Step 2: Integrate notepad++.exe to Git and make it the default editor
+
+# Check if notepad++ is recognized (this should open Notepad++)
+notepad++
+
+# Example path (adjust if different on your machine):
+# C:\Program Files\Notepad++
+
+# Set Notepad++ as Git's default editor
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+# Step 3: Add a file to source code repository
+
+# Create a new directory and initialize Git repository
+mkdir GitDemo
+cd GitDemo
+git init
+
+# Create a new file
+echo "This is my first Git file" > demo.txt
+
+# Check status
+git status
+
+# Stage the file
+git add demo.txt
+
+# Commit the file
+git commit -m "Initial commit with demo.txt"
+
+# Add remote repository (replace URL with your GitLab repo URL)
+git remote add origin <your-repository-URL>
+
+# Push to remote repository
+git push -u origin main

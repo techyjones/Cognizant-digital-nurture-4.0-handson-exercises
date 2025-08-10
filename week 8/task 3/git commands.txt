@@ -1,0 +1,46 @@
+
+# Branching and Merging Exercise Commands
+
+# 1. Create a new branch “GitNewBranch”
+git checkout -b GitNewBranch
+
+# 2. List all the local and remote branches
+git branch -a
+
+# 3. Switch to the newly created branch (already switched if using -b above)
+git checkout GitNewBranch
+
+# 4. Add some files to it with contents
+echo "This is a test file in GitNewBranch" > branchfile.txt
+
+# 5. Stage the new file
+git add branchfile.txt
+
+# 6. Commit the changes to the branch
+git commit -m "Added branchfile.txt in GitNewBranch"
+
+# 7. Check status
+git status
+
+
+
+# 1. Switch back to the main branch
+git checkout main
+
+# 2. List out all the differences between main and GitNewBranch
+git diff main GitNewBranch
+
+# 3. View differences using P4Merge
+git difftool main GitNewBranch
+
+# 4. Merge GitNewBranch into main
+git merge GitNewBranch
+
+# 5. View log after merging
+git log --oneline --graph --decorate
+
+# 6. Delete the branch after merging
+git branch -d GitNewBranch
+
+# 7. Check status
+git status
